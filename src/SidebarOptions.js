@@ -6,7 +6,6 @@ function SidebarOptions({active, Icon, text}) {
     <div className={`sidebar-option  ${active &&
      'sidebar-option--active'}`}>
       <Icon />
-      <h2>{text}</h2>
     </div>
   );
 }

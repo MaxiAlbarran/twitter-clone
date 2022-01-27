@@ -1,7 +1,9 @@
 .sidebar-option{
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
+  max-width: 50px;
 }
 
 .sidebar-option:hover{
@@ -12,7 +14,8 @@
 }
 
 .sidebar-option > .MuiSvgIcon-root{
-  padding: 20px;
+  padding: 10px;
+  font-size: 30px;
 }
 
 .sidebar-option > h2{
