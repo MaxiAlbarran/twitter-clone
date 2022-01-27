@@ -1,12 +1,12 @@
 .widgets {
-  flex: 0.3;
+  flex: 0.37;
 }
 
 .widgets--input {
   display: flex;
   align-items: center;
   background-color: var(--background);
-  padding: 15px;
+  padding: 10px;
   border-radius: 20px;
   margin: 5px 0 0 20px;
 }
