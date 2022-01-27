@@ -1,3 +1,41 @@
-.widgets{
+.widgets {
   flex: 0.3;
 }
+
+.widgets--input {
+  display: flex;
+  align-items: center;
+  background-color: var(--background);
+  padding: 15px;
+  border-radius: 20px;
+  margin: 5px 0 0 20px;
+}
+
+.widgets--input > input {
+  border: none;
+  background-color: var(--background);
+}
+
+.widgets--input > input::placeholder{
+  font-size: 15px;
+  padding: 0 0 0 20px;
+}
+
+.widgets--searchIcon {
+  color: gray;
+}
+
+.widgets--widgetContainer {
+  margin: 15px 0 0 20px;
+  padding: 20px;
+  background-color: #f5f8fa;
+  border-radius: 20px;
+}
+
+.widgets--widgetContainer > h2{
+  font-size: 18px;
+  font-weight: 800;
+}
+
+
+
