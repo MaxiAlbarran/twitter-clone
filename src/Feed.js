@@ -7,8 +7,10 @@ import TweetBox from './TweetBox';
 import useGetPosts from './hooks/useGetPosts';
 
 function Feed() {
+
   const [posts] = useGetPosts();
 
+  console.log("Esto llega", posts)
 
   return (
     <div className='feed'>
@@ -18,9 +20,12 @@ function Feed() {
 
       <TweetBox />
 
-      {posts.map((post) => (
-        <Post post={post.data()} key={post.data().id} />
+      
+      {posts.map((item) => (
+        <Post post={{...item.data(), id:item.id}} key={item.id} />
       ))}
+
+
     </div>
   );
 }
