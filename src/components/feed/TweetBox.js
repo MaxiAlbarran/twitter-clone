@@ -15,7 +15,7 @@ function TweetBox() {
     setTweet({ ...tweet, [name]: value });
   };
 
-  const [submitNewTweet] = usePostTweet(tweet);
+  const [submitNewTweet] = usePostTweet(tweet, setTweet);
 
   return (
     <div className='tweetBox'>

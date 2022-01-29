@@ -1,7 +1,7 @@
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import db from '../firebase';
 
-function usePostTweet(tweet) {
+function usePostTweet(tweet, setTweet) {
   const submitNewTweet = async (e) => {
     try {
       e.preventDefault();
@@ -13,8 +13,10 @@ function usePostTweet(tweet) {
         text: tweet.text,
         username: 'LeoMessiOK',
         verified: true,
+        createdAt: serverTimestamp(),
       });
       console.log(newPost);
+      setTweet({ text: '', image: '' })
     } catch (e) {
       console.log(e);
     }

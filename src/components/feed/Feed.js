@@ -9,6 +9,7 @@ import useGetPosts from '../../hooks/useGetPosts';
 function Feed() {
   const [posts] = useGetPosts();
 
+
   return (
     <div className='feed'>
       <div className='feed--header'>

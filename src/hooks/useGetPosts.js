@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import db from '../firebase';
-import { collection, onSnapshot } from 'firebase/firestore';
+import { collection, onSnapshot, query, orderBy, limit } from 'firebase/firestore';
 
 function useGetPosts() {
   const [posts, setPosts] = useState([]);
@@ -8,8 +8,9 @@ function useGetPosts() {
   useEffect(() => {
     const getPosts = async () => {
       try {
+        const q = query(collection(db, 'posts'), orderBy('createdAt', 'desc'));
         const querySnapshot = await onSnapshot(
-          collection(db, 'posts'),
+          q,
           (snapshot) => {
             setPosts(snapshot.docs);
             console.log(querySnapshot);
