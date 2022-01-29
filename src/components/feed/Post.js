@@ -1,13 +1,16 @@
-import { Avatar, Button } from '@material-ui/core';
 import React from 'react';
-import './Post.css';
+
+import { Avatar, Button } from '@material-ui/core';
+
+import './styles/Post.css';
 
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PublishIcon from '@material-ui/icons/Publish';
-import useDeletePost from './hooks/useDeletePost';
+
+import useDeletePost from '../../hooks/useDeletePost';
 
 function Post({ post }) {
   
@@ -25,7 +28,7 @@ function Post({ post }) {
               {post.displayName} {''}{' '}
               <span className='post--headerSpecial'>
                 <CheckCircleIcon className='post--badge' />
-                {post.username}
+                @{post.username}
               </span>{' '}
             </h3>
           </div>

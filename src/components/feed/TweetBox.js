@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+
 import { Avatar, Button } from '@material-ui/core';
-import './TweetBox.css';
-import usePostTweet from './hooks/usePostTweet';
+
+import './styles/TweetBox.css';
+
+import usePostTweet from '../../hooks/usePostTweet';
 
 function TweetBox() {
   const [tweet, setTweet] = useState({ text: '', image: '' });

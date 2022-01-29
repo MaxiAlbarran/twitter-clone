@@ -19,13 +19,15 @@ function Widgets() {
       <div className='widgets--widgetContainer'>
         <h2>What's happening </h2>
 
-        <TwitterTweetEmbed tweetId={'1483790401123209219'} />
-
         <TwitterTimelineEmbed
           sourceType='profile'
           screenName='sudanalytics_'
           options={{ height: 400 }}
         />
+
+        
+        <TwitterTweetEmbed tweetId={'1483790401123209219'} options={{width: 200}} />
+
 
         <TwitterShareButton
           url={"https://maxialbportfolio.netlify.app/"}

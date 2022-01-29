@@ -1,10 +1,10 @@
 import React from 'react';
-import './Feed.css';
+import './styles/Feed.css';
 
 import Post from './Post';
 import TweetBox from './TweetBox';
 
-import useGetPosts from './hooks/useGetPosts';
+import useGetPosts from '../../hooks/useGetPosts';
 
 function Feed() {
 

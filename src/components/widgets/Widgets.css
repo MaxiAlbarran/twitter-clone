@@ -1,5 +1,5 @@
 .widgets {
-  flex: 0.37;
+  grid-column: 3 / -1
 }
 
 .widgets--input {
@@ -35,6 +35,13 @@
 .widgets--widgetContainer > h2{
   font-size: 18px;
   font-weight: 800;
+}
+
+@media (min-width: 320px) and (max-width: 800px ){
+  .widgets{
+    display: none;
+    
+  }
 }
 
 
