@@ -1,6 +1,7 @@
 .tweetBox {
   padding: 0 10px 10px 0;
   border-bottom: 1px solid var(--background);
+  
 }
 
 .tweetBox > form {
@@ -20,6 +21,11 @@
   font-size: 20px;
 }
 
+.tweetBox__imageInput {
+  border: none !important;
+  margin-left: 80px;
+  padding: 10px !important;
+}
 
 .tweetBox--tweetButton {
   background-color: var(--color) !important;

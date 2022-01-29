@@ -1,13 +1,26 @@
 .post {
   display: flex;
   align-items: flex-start;
-  border-bottom: 1px solid var(--background);
+  border: 1px solid var(--background);
   padding-bottom: 10px;
 }
 
 .post--body {
   flex: 1;
   padding: 10px;
+}
+
+.post--header{
+  position: relative;
+}
+
+.post--header > button{
+  position: absolute !important;
+  top: 0 !important;
+  right:0 !important;
+  height: 20px !important;
+  width: 10px !important;
+  font-size: 80% !important;
 }
 
 
