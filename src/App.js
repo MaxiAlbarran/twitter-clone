@@ -1,6 +1,6 @@
 import './App.css';
 import Sidebar from './components/sidebar/Sidebar';
-import Feed from './components/feed/Feed';
+import Feed from './components/feed/Feed'
 import Widgets from './components/widgets/Widgets';
 
 
