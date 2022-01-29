@@ -1,32 +1,28 @@
 import { useEffect, useState } from 'react';
-import db from '../firebase'
-import { collection , onSnapshot } from 'firebase/firestore'
+import db from '../firebase';
+import { collection, onSnapshot } from 'firebase/firestore';
 
 function useGetPosts() {
-  const [posts, setPosts] = useState([])
-
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    
-     const getPosts = async() => {
+    const getPosts = async () => {
       try {
-        const querySnapshot = await onSnapshot(collection(db, 'posts'), (snapshot) =>{
-        setPosts(snapshot.docs)
-        // (snapshot.docs.map(doc=>{
-        //   setPosts({...doc.data(), id: doc.id})
-        // }))
+        const querySnapshot = await onSnapshot(
+          collection(db, 'posts'),
+          (snapshot) => {
+            setPosts(snapshot.docs);
+            console.log(querySnapshot);
+          }
+        );
+      } catch (e) {
+        console.log(e);
       }
-      );
-    } catch (e) {
-      console.log(e);
-    }
-     }
-     getPosts()
+    };
+    getPosts();
   }, []);
 
   return [posts];
-
-
 }
 
 export default useGetPosts;
